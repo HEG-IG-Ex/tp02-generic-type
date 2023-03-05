@@ -1,9 +1,9 @@
-import java.util.AbstractList;
+import java.util.*;
 
-public class DataList <T> extends AbstractList {
+public class DataList<E extends Additionable> extends AbstractList<E>{
 
     @Override
-    public T get(int index) {
+    public E get(int index) {
         return null;
     }
 
@@ -11,16 +11,4 @@ public class DataList <T> extends AbstractList {
     public int size() {
         return 0;
     }
-
-    public Number getTotal(){
-        for (Object el : this) {
-            el
-        };
-    }
-
-    public Double getAverage(){
-        return this.getTotal() / (Number) this.size();
-    }
-
-
 }
