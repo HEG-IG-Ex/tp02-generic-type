@@ -1,4 +1,4 @@
-public class Product extends Data implements Additionable<Integer>{
+public class Product extends Data implements Valuable<Integer>{
     private String name;
     private int price;
 
@@ -25,7 +25,7 @@ public class Product extends Data implements Additionable<Integer>{
     }
 
     @Override
-    public Integer getMemberToAddition() {
-        return new Integer(price);
+    public Integer getValue() {
+        return this.getPrice();
     }
 }

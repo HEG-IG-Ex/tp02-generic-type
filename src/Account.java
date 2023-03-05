@@ -1,4 +1,4 @@
-public class Account extends Data implements Additionable<Double>{
+public class Account extends Data implements Valuable<Double>{
     private double solde;
 
     public Account(int no, double solde) {
@@ -15,7 +15,7 @@ public class Account extends Data implements Additionable<Double>{
     }
 
     @Override
-    public Double getMemberToAddition() {
-        return new Double(solde);
+    public Double getValue() {
+        return this.getSolde();
     }
 }
